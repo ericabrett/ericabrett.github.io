@@ -3,23 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Parking Day</title>
-<script src="/vrview/build/vrview.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-  <script>
-  window.addEventListener("load", onVrViewLoad);
-function onVrViewLoad() {
-  var vrView = new VRView.Player("#vrview", {
-    image: "/vrtest2.jpg",
-    is_stereo: true,
-    width: 1200,
-    height: 600,
-    is_vr_off: false
-  });
-}
-</script>
-  <div id="vrview"></div>
+  <div class="container">
+    <div class=thumbnail><a  href="scene0.html">0</a></div>
+    <div class="thumbnail"><a href="scene1.html">1</a></div>
+    <div class="thumbnail"><a href="scene2.html">2</a></div>
+  </div>
+  </div>
 </body>
 
 </html>

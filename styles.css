@@ -1,0 +1,23 @@
+.thumbnail a {
+  font-size: 100px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.thumbnail {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(200, 200, 200);
+
+  text-align: center;
+  line-height: 100px;
+}
+
+.container {
+  overflow: hidden;
+}
