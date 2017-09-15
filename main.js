@@ -7,7 +7,7 @@ var imageIndex = 0;
 var numImages = 5;
 var imageInterval = 15000;
 var interval;
-var isPaused = false;
+var isPaused = true;
 
 window.addEventListener("load", onVrViewLoad);
 
