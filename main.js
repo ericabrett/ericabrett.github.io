@@ -5,8 +5,9 @@ var padding = {
 var vrView;
 var imageIndex = 0;
 var numImages = 5;
-var imageInterval = 20000;
+var imageInterval = 15000;
 var interval;
+var isPaused = false;
 
 window.addEventListener("load", onVrViewLoad);
 
@@ -19,11 +20,26 @@ function onVrViewLoad() {
     height: (width - padding.horizontal * 2) / 2,
     is_vr_off: false
   });
-  startTimer();
+  vrView.on("ready", function(e) {
+    startTimer();
+  });
+  vrView.on("click", function(e) {
+    isPaused = !isPaused;
+    if (isPaused) {
+      stop();
+    } else {
+      changeImage();
+      startTimer();
+    }
+  });
+}
+
+function advanceImageIndex() {
+  imageIndex = (imageIndex + 1) % numImages;
 }
 
 function changeImage() {
-  imageIndex = (imageIndex + 1) % numImages;
+  advanceImageIndex();
   vrView.setContent({
     image: getImagePath(),
     is_stereo: true,
