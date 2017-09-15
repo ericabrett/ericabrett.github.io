@@ -42,3 +42,30 @@ function startTimer() {
 function stop() {
   clearInterval(interval);
 }
+
+function preloader() {
+  if (document.images) {
+    var images = [];
+    for (var i = 0; i < numImages; i++) {
+      var image = new Image();
+      image.src = "/images/" + document.getElementById("vrview").dataset.prefix + "_" + i + ".jpg";
+      images.push(image);
+    }
+  }
+}
+
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != "function") {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload) {
+        oldonload();
+      }
+      func();
+    };
+  }
+}
+
+addLoadEvent(preloader);
