@@ -57,6 +57,12 @@ p.note {
   font-weight: normal;
 }
 
+p.note a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(50, 50, 50);
+}
+
 .footer_outer {
   width: 100%;
   bottom: 0;
@@ -92,7 +98,7 @@ p.note {
 }
 
 .thumbnail_tile a {
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   text-decoration: none;
   color: white;
