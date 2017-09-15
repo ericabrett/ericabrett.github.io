@@ -1,23 +1,127 @@
-.thumbnail a {
-  font-size: 100px;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+h1 {
+  font-family: "Century", serif;
+  font-size: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+h1 a {
   text-decoration: none;
   color: black;
+  vertical-align: middle;
+  display: table-cell;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
-.thumbnail {
-  float: left;
-  height: 100px;
-  width: 100px;
-  margin: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(200, 200, 200);
+h2 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
+p {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 13px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: bold;
+}
+
+p.description {
   text-align: center;
-  line-height: 100px;
 }
 
-.container {
-  overflow: hidden;
+p.note {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.footer_outer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  position: fixed;
+}
+
+.footer {
+  font-size: 10px;
+  margin: auto;
+  width: 500px;
+  height: 50px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.links_container {
+}
+
+.thumbnail_tile_outer {
+  padding: 30px;
+  text-align: center;
+  float: left;
+}
+
+.thumbnail_tile {
+  padding: 50px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  /*background-color: rgba(255, 255, 255, .5);*/
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.thumbnail_tile a {
+  font-size: 50px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
+  /*color: black;*/
+  vertical-align: middle;
+  display: table-cell;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.vrview_outer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.back {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
 }

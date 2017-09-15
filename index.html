@@ -2,16 +2,49 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Parking Day</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+<title>Alternative Topographies</title>
+<script type='text/javascript' src="/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class=thumbnail><a  href="scene0.html">0</a></div>
-    <div class="thumbnail"><a href="scene1.html">1</a></div>
-    <div class="thumbnail"><a href="scene2.html">2</a></div>
+  <script>
+  $(document).ready(function() {
+  setSizes();
+});
+$(window).resize(function() {
+  setSizes();
+});
+function setSizes() {
+  var padding = 140;
+  var innerPadding = 50;
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  var tileWidth = windowWidth / 2 - padding;
+  var tileHeight = (window.innerHeight - 550 - padding) / 3;
+  $(".thumbnail_tile_outer").width(tileWidth);
+  $(".thumbnail_tile_outer").height(tileHeight);
+  $(".thumbnail_tile").height(tileHeight - innerPadding * 2);
+  $(".thumbnail_tile a").height(tileHeight - innerPadding * 2);
+  $(".thumbnail_tile a").width(tileWidth);
+}
+</script>
+  <div>
+    <h1>ALTERNATIVE TOPOGRAPHIES</h1>
+    <p>Welcome! Below you will find links to a number of 'alternative topographies' created through the extrusions of various data. Please have a look around!</p>
+    <!-- <p class="note"><b>Note:</b> These are <i>not</i> interactive images, so you can look around, but you can't move!"</p> -->
+  </p>
   </div>
+  <div class="links_container">
+    <div class="thumbnail_tile_outer floatLeft"><div class="thumbnail_tile" style="background-image: url(/images/proximity_library_tile.jpg)"><a href="proximity_to_library.html">Proximity to Library</a></div></div>
+    <div class="thumbnail_tile_outer floatRight"><div class="thumbnail_tile"><a href="proximity_to_education.html">Proximity to Education</a></div></div>
+    <div class="thumbnail_tile_outer floatLeft"><div class="thumbnail_tile"><a href="proximity_to_transport.html">Proximity to Transportation</a></div></div>
+    <div class="thumbnail_tile_outer floatRight"><div class="thumbnail_tile"><a href="street_integration.html">Street Integration</a></div></div>
+    <div class="thumbnail_tile_outer floatLeft"><div class="thumbnail_tile"><a href="street_centrality.html">Street Centrality</a></div></div>
+    <div class="thumbnail_tile_outer floatRight"><div class="thumbnail_tile"><a href="police_incidents.html">Police Incidents</a></div></div>
+  </div>
+  <div class="footer_outer">
+    <div class="footer">Designed & Built by Woods Bagot</p>
   </div>
 </body>
 
