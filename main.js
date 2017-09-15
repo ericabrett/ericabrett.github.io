@@ -6,8 +6,9 @@ var vrView;
 var imageIndex = 0;
 var numImages = 5;
 var imageInterval = 15000;
-var interval;
+var timer;
 var isPaused = true;
+var firstClick = true;
 
 window.addEventListener("load", onVrViewLoad);
 
@@ -26,11 +27,12 @@ function onVrViewLoad() {
   vrView.on("click", function(e) {
     isPaused = !isPaused;
     if (isPaused) {
-      stop();
-    } else {
+      stopTimer();
+    } else if (!firstClick) {
       changeImage();
       startTimer();
     }
+    firstClick = false;
   });
 }
 
@@ -52,11 +54,16 @@ function getImagePath() {
 }
 
 function startTimer() {
-  interval = setInterval(changeImage, imageInterval);
+  timer = setTimeout(timerCallback, imageInterval);
 }
 
-function stop() {
-  clearInterval(interval);
+function stopTimer() {
+  clearTimeout(timer);
+}
+
+function timerCallback() {
+  changeImage();
+  startTimer();
 }
 
 function preloader() {
