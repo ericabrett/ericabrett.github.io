@@ -5,7 +5,7 @@ var padding = {
 var vrView;
 var imageIndex = 0;
 var numImages = 5;
-var imageInterval = 10000;
+var imageInterval = 20000;
 var interval;
 
 window.addEventListener("load", onVrViewLoad);
